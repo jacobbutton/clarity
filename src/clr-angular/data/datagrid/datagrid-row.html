@@ -66,4 +66,18 @@
   </div>
 </ng-template>
 
+
+<div *ngIf="selection.selectionType === SELECTION_TYPE.Multi && !displayCells"
+      class="datagrid-select datagrid-fixed-column datagrid-cell">
+</div>
+<div *ngIf="selection.selectionType === SELECTION_TYPE.Single && !displayCells"
+      class="datagrid-select datagrid-fixed-column datagrid-cell">
+</div>
+<div *ngIf="rowActionService.hasActionableRow && !displayCells"
+      class="datagrid-row-actions datagrid-fixed-column datagrid-cell">
+</div>
+<div *ngIf="globalExpandable.hasExpandableRow && !displayCells"
+      class="datagrid-expandable-caret datagrid-fixed-column datagrid-cell">
+</div>
 <ng-container #calculatedCells></ng-container>
+
